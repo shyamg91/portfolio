@@ -46,9 +46,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 10px 30px;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin: 10px 30px; }
 
 .grid-1-3 .col {
   width: 28%;
@@ -56,7 +56,7 @@ body {
   background: #fff;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   border-radius: 3px;
-  margin: 10px 5px;
+  margin: 20px 5px;
   height: 200px; }
   .grid-1-3 .col:hover {
     -ms-transform: translateY(-2px);
@@ -72,6 +72,9 @@ body {
   background: linear-gradient(to right, rgba(251, 0, 255, 0.68), rgba(255, 106, 0, 0.74)); }
 
 @media all and (min-device-width: 320px) and (max-device-width: 480px) {
+  .grid-1-3 {
+    -ms-flex-direction: initial;
+        flex-direction: initial; }
   .grid-1-3 .col {
     width: 100%; }
   .header {

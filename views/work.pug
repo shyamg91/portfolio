@@ -4,6 +4,7 @@ include mixins/_c101
 include mixins/_smp
 include mixins/_justly
 include mixins/_kindness
+include mixins/_sep
 
 block content
   .header
@@ -76,7 +77,7 @@ block content
           span.close#close4 ×
           | Student Event Photographers
         .modal-body
-          +smp()
+          +sep()
   script.
     var modal = document.getElementById('myModal');
     var modalSMP = document.getElementById('myModal1');

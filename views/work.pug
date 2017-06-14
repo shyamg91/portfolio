@@ -2,6 +2,8 @@ extends layout
 
 include mixins/_c101
 include mixins/_smp
+include mixins/_justly
+include mixins/_kindness
 
 block content
   .header
@@ -58,7 +60,7 @@ block content
           span.close#close2 ×
           | Justly
         .modal-body
-          +smp()
+          +justly()
     #myModal3.modal
       // Modal Kindness
       .modal-content
@@ -66,7 +68,7 @@ block content
           span.close#close3 ×
           | Kindness Generator
         .modal-body
-          +smp()
+          +kindness()
     #myModal4.modal
       // Modal SEP
       .modal-content

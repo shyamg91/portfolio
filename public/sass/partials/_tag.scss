@@ -9,6 +9,9 @@
 
 .tag {
   display: block;
+  background: $yellow;
+  border-radius: 3px;
+  padding: 3px 5px;
   margin-right: 1rem;
   &__choice {
     display: flex;

@@ -1,6 +1,7 @@
 extends layout
 
 include mixins/_c101
+include mixins/_smp
 
 block content
   .header
@@ -14,27 +15,26 @@ block content
          | Checkin101
         .card-info
          | A pulse survey tool for managers to gain insight into the sentiment of their team through periods of rapid change
-      .col 
+      .col#kindness
         .card-header(style={'background': '#fbfe00','color':'#000'})
           | Kindness Generator
         .card-info
          | A random acts of kindness generator built as a tool to suggest new acts for the hashtag happy new zealand community
-      .col 
+      .col#smp
         .card-header(style={'background': '#68c368','color':'#000'})
           | Support My Project
         .card-info
          | Kickstarter for youth projects to help find contributors and grow the support network
-      .col
+      .col#sep
         .card-header(style={'background': 'rgba(65, 36, 167, 0.7)','color':'#000'})
           | Student Event Photographers
         .card-info
          | Affordable quality photography for events by giving student photographers access to more opportunities
-      .col
+      .col#justly
         .card-header(style={'background': 'rgba(65, 36, 167, 0.7)','color':'#000'})
           | Justly
         .card-info
          | An online platform to make the process of creating a Will or a Power of attorney dead easy
-        // The Modal
     #myModal.modal
       // Modal Checkin101
       .modal-content
@@ -43,29 +43,104 @@ block content
           | Checkin101
         .modal-body
           +c101()
-
+    #myModal1.modal
+      // Modal SMP
+      .modal-content
+        .card-header
+          span.close#close1 ×
+          | Support My Project
+        .modal-body
+          +smp()
+    #myModal2.modal
+      // Modal Justly
+      .modal-content
+        .card-header
+          span.close#close2 ×
+          | Justly
+        .modal-body
+          +smp()
+    #myModal3.modal
+      // Modal Kindness
+      .modal-content
+        .card-header
+          span.close#close3 ×
+          | Kindness Generator
+        .modal-body
+          +smp()
+    #myModal4.modal
+      // Modal SEP
+      .modal-content
+        .card-header
+          span.close#close4 ×
+          | Student Event Photographers
+        .modal-body
+          +smp()
   script.
     var modal = document.getElementById('myModal');
+    var modalSMP = document.getElementById('myModal1');
+    var modalJustly = document.getElementById('myModal2');
+    var modalKindness = document.getElementById('myModal3');
+    var modalSEP = document.getElementById('myModal4');
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
-
+    var smp = document.getElementById("smp");
+    var justly = document.getElementById("justly")
+    var kindness = document.getElementById("kindness");
+    var sep = document.getElementById("sep");
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
+    var span1 = document.getElementById("close1");
+    var span2 = document.getElementById("close2");
+    var span3 = document.getElementById("close3");
+    var span4 = document.getElementById("close4");
     // When the user clicks the button, open the modal 
     btn.onclick = function () {
       modal.style.display = "block";
     }
-
+    smp.onclick = function () {
+      modalSMP.style.display = "block";
+    }
+    justly.onclick = function() {
+      modalJustly.style.display = "block";
+    }
+    kindness.onclick = function() {
+      modalKindness.style.display = "block";
+    }
+    sep.onclick = function() {
+      modalSEP.style.display = "block";
+    }
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
       modal.style.display = "none";
     }
-
+    span1.onclick = function () {
+      modalSMP.style.display = "none";
+    }
+    span2.onclick = function(){
+      modalJustly.style.display = "none";
+    }
+    span3.onclick = function(){
+      modalKindness.style.display = "none";
+    }
+    span4.onclick = function(){
+      modalSEP.style.display = "none";
+    }
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
+      }
+      else if (event.target == modalSMP) {
+        modalSMP.style.display = "none";
+      }
+      else if (event.target == modalJustly) {
+        modalJustly.style.display = "none";
+      }
+      else if (event.target == modalKindness) {
+        modalKindness.style.display = "none";
+      }
+      else if (event.target == modalSEP) {
+        modalSEP.style.display = "none";
       }
     }

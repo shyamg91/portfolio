@@ -509,8 +509,7 @@ html {
   font-size: 10px; }
 
 body {
-  font-size: 1.5rem;
-  color: #303030; }
+  font-size: 1.5rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 5rem;
@@ -519,7 +518,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px; }
 
 a {
-  text-decoration: none;
+  text-decoration: none; }
+
+.card-info {
   color: #303030; }
 
 p a {
@@ -841,6 +842,7 @@ label {
   color: white; }
 
 .modal-body {
+  color: #303030;
   padding: 2px 16px; }
   .modal-body__problem {
     text-align: left;
@@ -965,6 +967,9 @@ label {
 
 .tag {
   display: block;
+  background: #FFC40E;
+  border-radius: 3px;
+  padding: 3px 5px;
   margin-right: 1rem; }
   .tag__choice {
     display: -ms-flexbox;
